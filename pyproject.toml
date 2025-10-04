@@ -1,14 +1,18 @@
-[build-system]
-requires = ["setuptools>=61.0.0", "wheel"]
-build-backend = "setuptools.build_meta"
-
-[project]
+[tool.poetry]
 name = "ml-journey"
 version = "0.1.0"
-description = "Мой проект для изучения Machine Learning"
+description = ""
+authors = ["artempochuvalov <artempochuvalov@gmail.com>"]
 readme = "README.md"
-requires-python = ">=3.10"
-dependencies = [
-    "numpy>=2.0",
-    "pandas>=2.3",
-]
+packages = [{include = "ml_journey"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+scikit-learn = "^1.7.2"
+numpy = "^2.3.3"
+matplotlib = "^3.10.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
